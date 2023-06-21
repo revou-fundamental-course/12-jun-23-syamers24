@@ -1,12 +1,46 @@
 <!DOCTYPE html>
-<html
+<html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+    <title>Temperature Conversion</title>
 </head>
 <body>
-    <h1><center>Selamat datang di Kalkulator Suhu</center></h1>
-    <form action="">
-        <p><label for="Celcius">masukan angka Celcius:</label></p>
-
-        <textarea id="celcius" name="celcius" rows="4" cols="50" placeholder="masukan suhu Celcius"></textarea></form>
+    <header>
+    <!--<h1><center>Selamat datang di Kalkulator Suhu</center></h1> -->
+         <div class="flex-container">
+            <div id="webm">Conversion Site</div>
+            <div id="metrik">Metrix</div>
+            <div id="suhu">Suhu</div>
+            <div id="wm">Ahmad Ferdiansyah</div>
+        </div>
+    </header>
+    <div class="row">
+        <div class="column">
+            <section class="card1">
+                <section class="mp">
+                    <h3 class="h3">Konversi Suhu</h3>
+                    <p class="pgr">Masukan suhu derajat Celcius (&deg;C) ke kotak Dibawah, lalu klik tombol konversi untuk mendapatkan hasil Konversi kedalam bentuk Fahrenheit (&deg;F)</p>
+                         <form onsubmit="ctoc(event)">
+                            <p class="pgr2"><label for="Celcius">Celcius (&deg;C):</label></p>
+                                <textarea id="cls" class="text"  rows="10" cols="80" placeholder="masukan suhu Celcius"></textarea>
+                               
+                         </form>
+                         <button class="button-submit" type="submit">Konversi</button>
+                    </section>
+                </section>
+        </div>
+        <div class="column2">
+            <section class="card">
+                <section class="mp">
+                    <h3 class="h3">Contact me :</h3>
+                    <div id="badge" class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="ferdiansyah04" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://id.linkedin.com/in/ferdiansyah04?trk=profile-badge"></a></div>
+                    </section>
+                </section>
+        </div>
+</div>
 </body>
 </html>
