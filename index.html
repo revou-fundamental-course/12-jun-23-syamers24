@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-
+    <script src=Js/script.js></script>
     <title>Temperature Conversion</title>
 </head>
 <body>
     <header>
-    <!--<h1><center>Selamat datang di Kalkulator Suhu</center></h1> -->
+    <!--<h1><center>Selamat datang di Kalkulator Suhu</center></h1> 
+    di bawah sini adalah Header yang di buat menggunakan flex-box/flex-container
+    -->
          <div class="flex-container">
             <div id="webm">Conversion Site</div>
             <div id="metrik">Metrix</div>
@@ -24,12 +26,39 @@
                 <section class="mp">
                     <h3 class="h3">Konversi Suhu</h3>
                     <p class="pgr">Masukan suhu derajat Celcius (&deg;C) ke kotak Dibawah, lalu klik tombol konversi untuk mendapatkan hasil Konversi kedalam bentuk Fahrenheit (&deg;F)</p>
-                         <form onsubmit="ctoc(event)">
-                            <p class="pgr2"><label for="Celcius">Celcius (&deg;C):</label></p>
-                                <textarea id="cls" class="text"  rows="10" cols="80" placeholder="masukan suhu Celcius"></textarea>
-                               
-                         </form>
-                         <button class="button-submit" type="submit">Konversi</button>
+                        <!---Ini Adalah Tempat Submit Suhu Celcius--> 
+                    <form onsubmit="ctof(event)">
+                            <p class="pgr2"><label for="celsius">Celcius (&deg;C):</label></p>
+                                <div class="mt">
+                                    <input id="cels" type="number" class="box" placeholder="Masukan Suhu Yang Di Inginkan"/>
+                                        <div class="button-end">
+                                            <button class="button-submit" type="submit">Konversi</button>
+                                            <button onclick="reset(event)">Reset</button>
+                                            <button onclick="reverse()">Reverse</button>
+                                        </div>
+                                </div>
+                    </form>
+                    <form>
+                        <p class="pgr2"><label for="fahrenheit">Fahrenheit (&deg;F):</label></p>
+                            <div class="mt">
+                                <input id="fahr" type="number" class="box" />      
+                            </div>
+                    </form>
+                    <form>
+                        <p class="pgr2"><label for="cara"><h5>Cara Kerja : </h5><p id="nhow">Celsius (&deg;C) to Fahrenheit (&deg;F):</p></label></p>
+                            <div class="mt">
+                                <input id="how" class="box" />      
+                            </div>
+                    </form>
+                         <div>
+                            <p class="paragraf">Suhu S dalam derajat Celcius (°C) sama dengan Suhu S dalam 5/9 kali (derajat Fahrenheit (°F) kurang 32).</p>
+                            <p class="paragraf"><span class="rumus">°C = 5/9 x (°F - 32).</span></p>
+                            
+                            <p class="paragraf">atau</p>
+            
+                            <p class="paragraf">Suhu S dalam derajat Fahrenheit (°F) sama dengan Suhu S dalam (9/5 kali derajat Celcius (°C)) tambah 32.</p>
+                            <p class="paragraf"><span class="rumus">°F = (9/5 x °C) + 32.</span></p>
+                        </div>
                     </section>
                 </section>
         </div>

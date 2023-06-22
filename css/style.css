@@ -15,12 +15,7 @@
     padding: 15px;
   }
   
-  /*.flex-container > div {
-    width: auto;
-    margin: 10px;
-    line-height: 20px;
-    padding: 15px;
-  }*/
+
   #webm {
     border-radius: 15px;
     background-color: #29810c;
@@ -133,4 +128,39 @@ button{
     border-radius: 4px;
     height: 25px;
     width: 100px;
+    border: 1px solid black;
+    background-color: white;
+}
+.mt {
+    margin-top: 10px;
+}
+.button-end {
+    display: flex;
+    justify-content: end;
+}
+
+h5 {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    padding-right: 2px;
+}
+
+.box {
+    border: 1px solid;
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.box-end {
+    border: 1px solid;
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: large;
 }
