@@ -8,43 +8,56 @@
     <script src=Js/script.js></script>
     <title>Temperature Conversion</title>
 </head>
-<body>
+<body style="background-color:#fffbbe;" >
     <header>
     <!--<h1><center>Selamat datang di Kalkulator Suhu</center></h1> 
     di bawah sini adalah Header yang di buat menggunakan flex-box/flex-container
     -->
          <div class="flex-container">
             <div id="webm">Conversion Site</div>
-            <div id="metrik">Metrix</div>
-            <div id="suhu">Suhu</div>
+            
             <div id="wm">Ahmad Ferdiansyah</div>
         </div>
     </header>
-    <div class="row">
-        <div class="column">
+    <!-- dibawah sini adalah coding untuk side bar contact-->
+    <div class="main"><div>
+                <button class="openbtn" onclick="openNav(event)">Contact me :</button>
+            </div>
+            <div class="sidebar" id="fsidebar">
+                <section class="card">
+                    <section class="mp"><h3 class="h3">Contact me :</h3>
+                        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="ferdiansyah04" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://id.linkedin.com/in/ferdiansyah04?trk=profile-badge"></a></div>
+            
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav(event)">×</a>
+                        </section>
+                    </section>
+                    </div>
+                    <!-- dibawah ini adalah codingan inti Web Conversion dengan section sebagain penanda-->
             <section class="card1">
                 <section class="mp">
                     <h3 class="h3">Konversi Suhu</h3>
-                    <div id="ket">
-                    <p class="pgr">Masukan suhu derajat Celcius (&deg;C) ke kotak Dibawah, lalu klik tombol konversi untuk mendapatkan hasil Konversi kedalam bentuk Fahrenheit (&deg;F)</p>
-                    </div>   
-                    <!---Ini Adalah Tempat Submit Suhu Celcius--> 
+                    <div id="ket" class="pgr">
+                    <p>Masukan suhu derajat Celcius (&deg;C) ke kotak Dibawah, lalu klik tombol konversi untuk mendapatkan hasil Konversi kedalam bentuk Fahrenheit (&deg;F)</p>
+                    <p>Jika Ingin Menghitung sebaliknya Masukan suhu derajat Fahrenheit (&deg;F) ke kotak Dibawah, lalu klik tombol Reverse untuk mendapatkan hasil Konversi kedalam bentuk Celsius (&deg;C)</p>
+                    <p>Untuk mereset Semua, Maka Click Tombol Reset</p>
+                </div>   
+                    <!---Ini Adalah Tempat Submit Suhu awal--> 
                     <form onsubmit="ctof(event)">
-                        <div id="cld">
-                            <p class="pgr2"><label for="celsius">Celcius (&deg;C):</label></p>
+                        <div id="cld" class="pgr2">
+                            <p>Celcius (&deg;C):</p>
                         </div>
                                 <div class="mt">
                                     <input id="cels" type="number" class="box" placeholder="Masukan Suhu Yang Di Inginkan"/>
                                         <div class="button-end">
-                                            <button class="button-submit" type="submit">Konversi</button>
-                                            <button  onclick="reset(w)">Reset</button>
-                                            <button onclick="reverse()">Reverse</button>
+                                            <button class="button2" type="submit">Konversi</button>
+                                            <button class="button2" onclick="reset(event)">Reset</button>
+                                            <button class="button2" onclick="reverse(event)">Reverse</button>
                                         </div>
                                 </div>
                     </form>
                     <form>
-                        <div id="fh">
-                        <p class="pgr2">Fahrenheit (&deg;F):</p>
+                        <div id="fh" class="pgr2">
+                        <p>Fahrenheit (&deg;F):</p>
                         </div>
                             <div class="mt">
                                 <input id="fahr"  class="box" disabled />      
@@ -52,31 +65,27 @@
 
                     </form>
                     <form>
-                        <p class="pgr2"><label for="cara"><h5>Cara Kerja : </h5><p id="nhow">Celsius (&deg;C) to Fahrenheit (&deg;F):</p></label></p>
+                        <p class="pgr">Cara Kerja :</p><p id="nhow">Celsius (&deg;C) to Fahrenheit (&deg;F):</p>
                             <div class="mt">
                                 <input id="how" class="box" disabled />      
                             </div>
                     </form>
                          <div>
-                            <p class="paragraf">Suhu S dalam derajat Celcius (°C) sama dengan Suhu S dalam 5/9 kali (derajat Fahrenheit (°F) kurang 32).</p>
-                            <p class="paragraf"><span class="rumus">°C = 5/9 x (°F - 32).</span></p>
+                            <h3 class="pgr">Untuk menghitung Suhu Celsius °C</h3>
+                            <p class="pgr">Suhu S dalam derajat Celcius (°C) sama dengan Suhu S dalam 5/9 kali (derajat Fahrenheit (°F) kurang 32).</p>
+                            <p class="pgr"><span class="rumus">°C = 5/9 x (°F - 32).</span></p>
                             
-                            <p class="paragraf">atau</p>
-            
-                            <p class="paragraf">Suhu S dalam derajat Fahrenheit (°F) sama dengan Suhu S dalam (9/5 kali derajat Celcius (°C)) tambah 32.</p>
-                            <p class="paragraf"><span class="rumus">°F = (9/5 x °C) + 32.</span></p>
+                            <p class="pgr">atau</p>
+                            <h3 class="pgr">Untuk menghitung Suhu Fahrenheit °F</h3>
+                            <p class="pgr">Suhu S dalam derajat Fahrenheit (°F) sama dengan Suhu S dalam (9/5 kali derajat Celcius (°C)) tambah 32.</p>
+                            <p class="pgr"><span class="rumus">°F = (9/5 x °C) + 32.</span></p>
                         </div>
                     </section>
                 </section>
         </div>
-        <div class="column2">
-            <section class="card">
-                <section class="mp">
-                    <h3 class="h3">Contact me :</h3>
-                    <div id="badge" class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="ferdiansyah04" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://id.linkedin.com/in/ferdiansyah04?trk=profile-badge"></a></div>
-                    </section>
-                </section>
-        </div>
+        
+    
+</div>
 </div>
 </body>
 </html>

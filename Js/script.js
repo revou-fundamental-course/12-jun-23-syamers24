@@ -1,8 +1,4 @@
-//function ctoc() {
-//let celcius = document.getElementById('cls')
-
-//}
-
+//ini adalah fungsi untuk tombol Konversi
 function ctof(event) {
     event.preventDefault();
 
@@ -10,42 +6,62 @@ function ctof(event) {
     var fh = inputCelcius * (9 / 5) + 32;
     document.getElementById("fahr").value = fh + "°F" ;
     document.getElementById("how").value = inputCelcius + " * (9 / 5) + 32 = " + fh +"°F";
+    document.getElementById("fh").innerHTML = " <p>Fahrenheit (&deg;F):</p>";
+    document.getElementById("cld").innerHTML = " <p>Celcius (&deg;C):</p>";
 }
 
-function reset(w) {
-    w.preventDefault();
+//ini adalah fungsi untuk Tombol Reset
+function reset(event) {
+   event.preventDefault();
 
     document.getElementById("fahr").value = "0";
     document.getElementById("cels").value = "0"; 
     if (document.getElementById("cels").value === 0) {
  
-        document.getElementById("how").value = " (0) * (9 / 5) + 32 = "+fh ;
+        document.getElementById("how").value = " 0 * (9 / 5) + 32 = "+fh ;
     }
     else {
         document.getElementById("how").value = cels + " * (9 / 5) + 32 = "+fh ;
     }
 }
-function reverse() {
-   var fhs = document.getElementById("cels").value;
-    var x = document.getElementById("ket");
-    var d = document.getElementById("fh");
-    var p = document.getElementById("cld");
-    var cls = (fhs - 32) * 5 / 9;
-    if(x.innerHTML === "Masukan suhu derajat Celcius (&deg;C) ke kotak Dibawah, lalu klik tombol konversi untuk mendapatkan hasil Konversi kedalam bentuk Fahrenheit (&deg;F)") {
-      x.innerHTML = "Masukan suhu derajat Fahrenheit (&deg;F) ke kotak Dibawah, lalu klik tombol konversi untuk mendapatkan hasil Konversi kedalam bentuk Celcius (&deg;C)";
-    }else{
-        x.innerHTML = "Masukan suhu derajat Celcius (&deg;C) ke kotak Dibawah, lalu klik tombol konversi untuk mendapatkan hasil Konversi kedalam bentuk Fahrenheit (&deg;F)";
-    }
-      
-      d.innerHTML = "Celcius (&deg;C):";
-      p.innerHTML = "Fahrenheit (&deg;F):";
 
-    document.getElementById("fahr").value = cls;
-     
+//ini adalah fungsi untuk tombol reverse
+function reverse(event) {
+  event.preventDefault();
+   var fhs = document.getElementById("cels").value;
+    var cls = (fhs - 32) * 5 / 9;
+    document.getElementById("fahr").value = cls+"°c";
+
+    var x = document.getElementById("fh");
+    var d = document.getElementById("cld");
+    var g = document.getElementById("nhow");
+    if (d.innerHTML === "<p>Celcius (&deg;C):</p>") {
+      x.innerHTML = "<p>Fahrenheit (&deg;F):</p>";
+      d.innerHTML = "<p>Celcius (&deg;C):</p>";
+
+    } else {
+      x.innerHTML = " <p>Celcius(&deg;C):</p>";
+      d.innerHTML = "<p>Fahrenheit (&deg;F):</p>";
+      g.innerHTML ="Fahrenheit (&deg;F) to Celsius (&deg;C):</p>";
+    }
     if (document.getElementById("cels").value === 0) {
-    document.getElementById("how").value = " (0) * (9 / 5) + 32 = "+cls ;
+    document.getElementById("how").value = " 0°f * (9 / 5) + 32 = "+cls+"°c" ;
     }
     else {
-        document.getElementById("how").value = fhs + " * (9 / 5) + 32 = "+cls ;
+        document.getElementById("how").value = fhs + " * (9 / 5) + 32 = "+cls+"°c" ;
     }
+    
 }
+//ini adalah fungsi untuk sidebarNav saat dibuka
+function openNav(event) {
+  event.preventDefault();
+  document.getElementById("fsidebar").style.width = "325px";
+  document.getElementById("main").style.marginRight = "450px";
+}
+//ini adalah Fungsi untuk sidebarNav saat ditutup
+function closeNav(event) {
+  event.preventDefault();
+  document.getElementById("fsidebar").style.width = "0";
+  document.getElementById("main").style.marginRight= "0";
+}
+
