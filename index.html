@@ -25,29 +25,36 @@
             <section class="card1">
                 <section class="mp">
                     <h3 class="h3">Konversi Suhu</h3>
+                    <div id="ket">
                     <p class="pgr">Masukan suhu derajat Celcius (&deg;C) ke kotak Dibawah, lalu klik tombol konversi untuk mendapatkan hasil Konversi kedalam bentuk Fahrenheit (&deg;F)</p>
-                        <!---Ini Adalah Tempat Submit Suhu Celcius--> 
+                    </div>   
+                    <!---Ini Adalah Tempat Submit Suhu Celcius--> 
                     <form onsubmit="ctof(event)">
+                        <div id="cld">
                             <p class="pgr2"><label for="celsius">Celcius (&deg;C):</label></p>
+                        </div>
                                 <div class="mt">
                                     <input id="cels" type="number" class="box" placeholder="Masukan Suhu Yang Di Inginkan"/>
                                         <div class="button-end">
                                             <button class="button-submit" type="submit">Konversi</button>
-                                            <button onclick="reset(event)">Reset</button>
+                                            <button  onclick="reset(w)">Reset</button>
                                             <button onclick="reverse()">Reverse</button>
                                         </div>
                                 </div>
                     </form>
                     <form>
-                        <p class="pgr2"><label for="fahrenheit">Fahrenheit (&deg;F):</label></p>
+                        <div id="fh">
+                        <p class="pgr2">Fahrenheit (&deg;F):</p>
+                        </div>
                             <div class="mt">
-                                <input id="fahr" type="number" class="box" />      
+                                <input id="fahr"  class="box" disabled />      
                             </div>
+
                     </form>
                     <form>
                         <p class="pgr2"><label for="cara"><h5>Cara Kerja : </h5><p id="nhow">Celsius (&deg;C) to Fahrenheit (&deg;F):</p></label></p>
                             <div class="mt">
-                                <input id="how" class="box" />      
+                                <input id="how" class="box" disabled />      
                             </div>
                     </form>
                          <div>
